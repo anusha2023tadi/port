@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html#home">MyPortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+ <!--home-->
+<!-- Hero Section -->
+<section id="home" class="hero d-flex align-items-center"
+  style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)); min-height: 100vh; padding: 100px 8%; z-index: 1;">
+  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-5">
+    <div class="hero-text text-white" style="max-width: 600px; z-index: 2;">
+      <h1>Hello, I'm <span style="color: #f54291;">Anusha Tadi</span></h1>
+      <p class="text-white">A Frontend Developer passionate about building modern, responsive websites with clean code and smooth user experiences. I bring ideas to life using React, Tailwind CSS, and thoughtful design.</p>
+      <div class="buttons">
+        <a href="Tadi Anusha.pdf" class="btn btn-pink">Hire Me</a>
+        <a href="#projects" class="btn btn-outline-light">View Projects</a>
+      </div>
+    </div>
+    <div class="hero-img" style="z-index: 1;">
+      <div class="profile-pic">
+        <img src="images/image.jpeg" alt="Profile Image" class="img-fluid rounded-circle">
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const current = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-link").forEach(link => {
+      const linkPage = link.getAttribute("href");
+      if (linkPage === current || (linkPage === "index.html" && current === "")) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
+
+  <!-- About Section -->
+  <section class="about-hero" id="about">
+    <div class="about-container">
+      
+      <!-- Heading inside container but on top -->
+      <div class="About-heading" style="width: 100%; text-align: center;">
+        <h2>About Me</h2>
+      </div>
+  
+      <!-- About content: image + text -->
+      <div class="about-image">
+        <img src="images/image.jpeg" alt="Profile Picture">
+      </div>    
+      <div class="about-text">
+        <h1>Hi there!</h1>
+        <p>Hi, I’m Anusha, a Computer Science student with a passion for front-end development and creative web design.I love bringing ideas to life through clean, responsive, and visually engaging websites.I’m proficient in technologies like HTML5, CSS3, JavaScript, React.js, and Bootstrap, and I’m always excited to learn new tools and frameworks.</p>
+      </div>
+  
+    </div>
+  </section>
+  <!-- Career Section -->
+  <section class="career">
+    <div class="career-container">
+      <div class="career-text">
+        <h2>My Career</h2>
+        <p>My goal is to become a professional front-end developer and work on real-world projects that combine great design with seamless user experience. I’m looking for internships and opportunities where I can learn from industry professionals, contribute to meaningful work, and grow in a collaborative environment.</p>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/yourprofile" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/yourprofile" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:your.email@example.com" class="email"><i class="fas fa-envelope"></i></a>
+        </div>
+        </div>
+        <div class="skills-tags">
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>React.js</span>
+        <span>Node.js</span>
+        <span>Bootstrap</span>
+        <span>Git & GitHub</span>
+        <span>Operating Systems</span>
+        <div class="github-link">
+          <a href="https://github.com/anushatadi" target="_blank">
+            <i class="fab fa-github"></i> View My GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const current = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".nav-link").forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === current || (linkPage === "index.html" && current === "")) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+  </script>
+  </section>
+
+<!-- Projects Section -->
+<section id="projects" class="container my-5">
+  <h2 class="section-title text-center">My Projects</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+          <div class="project-card">
+              <img src="images\angular.png" alt="Project 1" class="img-fluid mb-3">
+              <h3>Traffic </h3>
+              <p>Angular</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="project-card">
+              <img src="images\react project.png" alt="Project 2" class="img-fluid mb-3">
+              <h3>Musicify</h3>
+              <p>React</p>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Modals -->
+  <div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Musicify Website</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is a brief description of the my-music Website project.</p>
+          <a href="http://localhost:3000/" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Musicify App</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is a brief description of the my-music App project.</p>
+          <a href="http://localhost:3000/" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+        
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
+        });
+    });
+});
+
+</script>
+  
+<!-- Skills Section -->
+  <section class="container my-5" id="skills">
+    <h2 class="section-title text-center">My Skills</h2>
+    <div class="row justify-content-center">
+      <!-- HTML -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="skill-card html">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <div class="skill-icon">🔶</div>
+              <div class="skill-name">HTML</div>
+            </div>
+            <div class="skill-card-back">
+              <div class="skill-detail">
+                Solid understanding of semantic HTML, forms, tables, multimedia, and best practices for SEO-friendly markup.
+              </div>
+              <div class="progress-bar">
+                <div class="progress" data-level="90"></div>
+              </div>
+              <div class="progress-label">90%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="skill-card css">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <div class="skill-icon">🎨</div>
+              <div class="skill-name">CSS</div>
+            </div>
+            <div class="skill-card-back">
+              <div class="skill-detail">
+                Proficient in Flexbox, Grid, responsive design, animations, and theming using modern CSS3 features.
+              </div>
+              <div class="progress-bar">
+                <div class="progress" data-level="85"></div>
+              </div>
+              <div class="progress-label">90%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="skill-card js">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <div class="skill-icon">📜</div>
+              <div class="skill-name">JavaScript</div>
+            </div>
+            <div class="skill-card-back">
+              <div class="skill-detail">
+                Good grasp of ES6+, DOM manipulation, events, API integration, and creating dynamic UI components.
+              </div>
+              <div class="progress-bar">
+                <div class="progress" data-level="80"></div>
+              </div>
+              <div class="progress-label">85%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- React -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="skill-card react">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <div class="skill-icon">⚛️</div>
+              <div class="skill-name">React</div>
+            </div>
+            <div class="skill-card-back">
+              <div class="skill-detail">
+                Comfortable with components, props, state, hooks, and basic routing. Working toward mastering advanced patterns.
+              </div>
+              <div class="progress-bar">
+                <div class="progress" data-level="75"></div>
+              </div>
+              <div class="progress-label">85%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const current = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".nav-link").forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === current || (linkPage === "index.html" && current === "")) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+  </script>
+  </section>
+
+<!-- Contact Section -->
+<section class="creative-section" id="contact">
+  <!-- Top heading -->
+  <div class="contact-heading">
+    <h2>Contact Me</h2>
+  </div>
+
+  <!-- Flex container for text + form -->
+  <div class="creative-content">
+    <div class="creative-text">
+      <h1>Trying to create together!</h1>
+    </div>
+
+    <div class="creative-form">
+      <form action="#">
+        <input type="text" class="form-control" placeholder="Your name" required>
+        <input type="email" class="form-control" placeholder="Your email" required>
+        <textarea class="form-control" placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-dark w-100">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const current = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".nav-link").forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === current || (linkPage === "index.html" && current === "")) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+  </script>
+  
+
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Optional: Add JS to animate progress bars -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.progress').forEach(bar => {
+        const level = bar.getAttribute('data-level');
+        if (level) {
+          bar.style.width = level;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
