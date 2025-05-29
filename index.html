@@ -76,14 +76,14 @@
 </script>
 
   <!-- About Section -->
-  <section class="about-hero" id="about">
+  <section id="about" class="container my-5">
     <div class="about-container">
       
-      <!-- Heading inside container but on top -->
-      <div class="About-heading" style="width: 100%; text-align: center;">
-        <h2>About Me</h2>
-      </div>
-  
+  <!-- Heading inside container but on top -->
+  <div class="About-heading" style="width: 100%; text-align: center; margin-top: -40px;">
+  <h2>About Me</h2>
+  </div>
+
       <!-- About content: image + text -->
       <div class="about-image">
         <img src="images/image.jpeg" alt="Profile Picture">
@@ -103,9 +103,9 @@
         <p>My goal is to become a professional front-end developer and work on real-world projects that combine great design with seamless user experience. I’m looking for internships and opportunities where I can learn from industry professionals, contribute to meaningful work, and grow in a collaborative environment.</p>
         <!-- Social Media Icons -->
         <div class="social-icons">
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/tadi-anusha-527a3a289/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://twitter.com/yourprofile" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://instagram.com/yourprofile" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
           <a href="mailto:your.email@example.com" class="email"><i class="fas fa-envelope"></i></a>
         </div>
         </div>
@@ -120,7 +120,7 @@
         <span>Git & GitHub</span>
         <span>Operating Systems</span>
         <div class="github-link">
-          <a href="https://github.com/anushatadi" target="_blank">
+          <a href="https://github.com/anusha2023tadi" target="_blank">
             <i class="fab fa-github"></i> View My GitHub
           </a>
         </div>
@@ -160,6 +160,14 @@
               <p>React</p>
           </div>
       </div>
+
+      <div class="col">
+          <div class="project-card">
+              <img src="images\weather.png" alt="Project 2" class="img-fluid mb-3">
+              <h3>Weatherapp</h3>
+              <p>Html,css,javascript</p>
+          </div>
+      </div>
   </div>
 </section>
 <!-- Modals -->
@@ -183,6 +191,21 @@
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-0">
           <h5 class="modal-title">Musicify App</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is a brief description of the my-music App project.</p>
+          <a href="http://localhost:3000/" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">WeatherApp</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
@@ -326,58 +349,44 @@
   </section>
 
 <!-- Contact Section -->
-<section class="creative-section" id="contact">
+<section class="container my-5" id="contact">
   <!-- Top heading -->
-  <div class="contact-heading">
-    <h2>Contact Me</h2>
+  <div class="About-heading" style="width: 100%; text-align: center; margin-top: -75px;">
+  <h2>Contact Me</h2>
   </div>
 
   <!-- Flex container for text + form -->
   <div class="creative-content">
+    <!-- Text Intro -->
     <div class="creative-text">
-      <h1>Trying to create together!</h1>
+      <h1>Let’s Build Something <span class="highlight">Amazing</span> Together!</h1>
     </div>
 
+    <!-- Contact Form -->
     <div class="creative-form">
       <form action="#">
         <input type="text" class="form-control" placeholder="Your name" required>
         <input type="email" class="form-control" placeholder="Your email" required>
         <textarea class="form-control" placeholder="Message" rows="5" required></textarea>
-        <button type="submit" class="btn btn-dark w-100">Submit</button>
+        <button type="submit" class="btn-submit">SUBMIT</button>
       </form>
+
+      <!-- Social Media Icons -->
+      <div class="social-media">
+        <a href="https://github.com/anusha2023tadi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tadi-anusha-527a3a289/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/anushatadi" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:anusha@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
   </div>
 </section>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const current = window.location.pathname.split("/").pop();
-      document.querySelectorAll(".nav-link").forEach(link => {
-        const linkPage = link.getAttribute("href");
-        if (linkPage === current || (linkPage === "index.html" && current === "")) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
-      });
-    });
-  </script>
-  
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Anusha Tadi. All rights reserved.</p>
+    <p class="mb-0">Frontend Developer | Portfolio Website</p>
+  </div>
+</footer>
 
-  
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Optional: Add JS to animate progress bars -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('.progress').forEach(bar => {
-        const level = bar.getAttribute('data-level');
-        if (level) {
-          bar.style.width = level;
-        }
-      });
-    });
-  </script>
-</body>
-</html>
